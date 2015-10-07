@@ -1,0 +1,7 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Startup.master.cs" Inherits="MSLabSite.Pages.Startup" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+</asp:Content>
+

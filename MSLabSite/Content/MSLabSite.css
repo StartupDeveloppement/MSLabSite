@@ -1,0 +1,24 @@
+﻿.AspMenuItem {
+    padding: 5px 5px 5px 5px;
+    margin : 10px 15px 0px 0px;
+    background-color: darkgray;
+    color: white;
+    font-family: 'Segoe UI';
+    font-size:16px;
+}
+
+.AspSubMenuItem 
+{
+    padding: 5px 5px 5px 5px;
+    background-color: darkgray;
+    color: white;
+    font-family: 'Segoe UI Symbol';
+}
+
+
+.AspThirdMenuItem {
+    padding: 5px 5px 5px 5px;
+    background-color: darkgray;
+    color: white;
+    font-family: 'Segoe UI Symbol';
+}
