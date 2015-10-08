@@ -189,6 +189,7 @@
     <Content Include="Pages\SqlServer.aspx" />
     <Content Include="Pages\SSIS.aspx" />
     <Content Include="Pages\Start.aspx" />
+    <None Include="Properties\PublishProfiles\TestPublish.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Pages\Technologies.aspx" />
     <Content Include="Pages\VisualStudio.aspx" />
