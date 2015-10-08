@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MSLab {
+namespace MSLab.Site {
     
     
     public partial class SiteMaster {
