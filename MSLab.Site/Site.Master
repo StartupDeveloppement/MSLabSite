@@ -7,7 +7,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %></title>
-
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -110,6 +109,9 @@
                 </div>
             </div>
         </div>
+
+        <asp:Label ID="PageTitle" runat="server" CssClass="LabSitePageTitle" Font-Size="XX-Large"></asp:Label>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

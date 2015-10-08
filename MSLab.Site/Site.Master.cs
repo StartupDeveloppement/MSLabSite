@@ -12,6 +12,7 @@ namespace MSLab.Site
 {
     public partial class SiteMaster : MasterPage
     {
+        #region ASP autoInit
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
@@ -66,10 +67,11 @@ namespace MSLab.Site
                 }
             }
         }
+        #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            PageTitle.Text = this.Page.Title;
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
