@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:MSLab.WPF.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Quelle heure est-il ?" Name="ButtonWhatTime" Click="ButtonWhatTime_Click"></Button>
+            <Label Name="LabelTime" Width="200"></Label>
+        </StackPanel>
         
-    </Grid>
+    </StackPanel>
 </Window>

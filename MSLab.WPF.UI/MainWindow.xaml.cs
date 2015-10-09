@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MSLab.WPF.Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace MSLab.WPF.UI
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonWhatTime_Click(object sender, RoutedEventArgs e)
+        {
+            DemoService demo = new DemoService();
+            LabelTime.Content = string.Format("{0:MM/dd/yy H:mm:ss}", demo.WhatTimeIsIt()); 
         }
     }
 }
