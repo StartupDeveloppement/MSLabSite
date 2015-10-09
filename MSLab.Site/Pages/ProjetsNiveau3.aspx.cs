@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MSLab.Site
+namespace MSLab.Site.Pages
 {
-    public partial class _Default : Page
+    public partial class ProjetsNiveau3 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

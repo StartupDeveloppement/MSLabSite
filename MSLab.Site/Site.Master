@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %></title>
+    <title><%: string.Format("Laboratoire Dev > {0}", Page.Title) %></title>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -85,10 +85,9 @@
                                 <asp:MenuItem NavigateUrl="~/Pages/VisualStudio.aspx" Text="Visual Studio"></asp:MenuItem>
                             </asp:MenuItem>
                             <asp:MenuItem Text="Microsoft Technologies">
-                                <asp:MenuItem Text="Clients lourds">
+                                <asp:MenuItem Text="Clients">
                                     <asp:MenuItem NavigateUrl="~/Pages/Console.aspx" Text="Console"></asp:MenuItem>
                                     <asp:MenuItem NavigateUrl="~/Pages/WPF.aspx" Text="WPF"></asp:MenuItem>
-                                    <asp:MenuItem NavigateUrl="~/Pages/WinForms.aspx" Text="Winforms"></asp:MenuItem>
                                 </asp:MenuItem>
                                 <asp:MenuItem Text="Web">
                                     <asp:MenuItem NavigateUrl="~/Pages/AspWebForms.aspx" Text="Asp WebForms"></asp:MenuItem>
@@ -104,13 +103,18 @@
                                     <asp:MenuItem NavigateUrl="~/Pages/SSIS.aspx" Text="SSIS"></asp:MenuItem>
                                 </asp:MenuItem>
                             </asp:MenuItem>
+                            <asp:MenuItem Text="Projets">
+                                <asp:MenuItem NavigateUrl="~/Pages/ProjetsNiveau1.aspx" Text="Projets niveau débutant"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Pages/ProjetsNiveau2.aspx" Text="Projets niveau avancé"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Pages/ProjetsNiveau3.aspx" Text="Projets niveau confirmé"></asp:MenuItem>
+                            </asp:MenuItem>
                         </Items>
                     </asp:Menu>
                 </div>
             </div>
         </div>
 
-        <asp:Label ID="PageTitle" runat="server" CssClass="LabSitePageTitle" Font-Size="XX-Large"></asp:Label>
+        <asp:Label ID="PageTitle" runat="server" CssClass="LabSitePageTitle"></asp:Label>
 
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">

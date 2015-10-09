@@ -1,4 +1,5 @@
-﻿.AspMenuItem {
+﻿.AspMenuItem
+{
     padding: 5px 5px 5px 5px;
     margin : 10px 15px 0px 0px;
     background-color: darkgray;
@@ -21,4 +22,36 @@
     background-color: darkgray;
     color: white;
     font-family: 'Segoe UI Symbol';
+}
+
+.LabSitePageTitle 
+{
+    color:black;
+    font-family: 'Segoe UI Symbol';
+    font-size:35px;
+    padding-left:50px;
+}
+
+.LabSitePageTitle2
+ {
+    color:blue;
+    font-family: 'Segoe UI Symbol';
+    font-size:25px;
+    padding:10px
+}
+
+.LabSiteZoneTexteClient
+ {
+    color:white;
+    background-color:gray;
+    border-radius:10px;
+    font-style: italic;
+    font-family: 'Segoe UI';
+}
+
+.LabSiteZoneProjet
+{
+    border:2px dashed gray;
+    padding:8px;
+    margin-top:15px;
 }

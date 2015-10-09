@@ -173,7 +173,9 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\MSLabSite.css" />
+    <Content Include="Content\MSLabSite.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -186,6 +188,9 @@
     <Content Include="Pages\AspWebForms.aspx" />
     <Content Include="Pages\Console.aspx" />
     <Content Include="Pages\Git.aspx" />
+    <Content Include="Pages\ProjetsNiveau1.aspx" />
+    <Content Include="Pages\ProjetsNiveau2.aspx" />
+    <Content Include="Pages\ProjetsNiveau3.aspx" />
     <Content Include="Pages\SqlServer.aspx" />
     <Content Include="Pages\SSIS.aspx" />
     <Content Include="Pages\Start.aspx" />
@@ -196,6 +201,7 @@
     <Content Include="Pages\WCF.aspx" />
     <Content Include="Pages\WinForms.aspx" />
     <Content Include="Pages\WPF.aspx" />
+    <Content Include="Resources\ProjetsNiveau1\ProjetNiveau1_Calculatrice_1.PNG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -406,6 +412,27 @@
     <Compile Include="Pages\Git.aspx.designer.cs">
       <DependentUpon>Git.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ProjetsNiveau1.aspx.cs">
+      <DependentUpon>ProjetsNiveau1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProjetsNiveau1.aspx.designer.cs">
+      <DependentUpon>ProjetsNiveau1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProjetsNiveau2.aspx.cs">
+      <DependentUpon>ProjetsNiveau2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProjetsNiveau2.aspx.designer.cs">
+      <DependentUpon>ProjetsNiveau2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProjetsNiveau3.aspx.cs">
+      <DependentUpon>ProjetsNiveau3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProjetsNiveau3.aspx.designer.cs">
+      <DependentUpon>ProjetsNiveau3.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SqlServer.aspx.cs">
       <DependentUpon>SqlServer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -492,7 +519,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MSLab.Site.Business\MSLab.Site.Business.csproj">
