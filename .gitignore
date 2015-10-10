@@ -196,3 +196,4 @@ FakesAssemblies/
 *.opt
 /MSLab.Site/Resources/Git/*.db
 /MSLab.Site/Resources/TortoiseGit/*.db
+/MSLab.Site/Resources/GitBash/*.db
