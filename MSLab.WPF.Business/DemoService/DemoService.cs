@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MSLab.WPF.Business.MSLabDemoService;
 
 namespace MSLab.WPF.Business
 {
@@ -10,7 +7,7 @@ namespace MSLab.WPF.Business
     {
         public DateTime WhatTimeIsIt()
         {
-            MSLabDemoService.MSLabServiceClient msLab = new MSLabDemoService.MSLabServiceClient();
+            var msLab = new MSLabServiceClient();
             return msLab.WhatTimeIsIt();
         }
     }

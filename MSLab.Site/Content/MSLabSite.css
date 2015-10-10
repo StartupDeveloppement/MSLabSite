@@ -1,57 +1,51 @@
-﻿.AspMenuItem
-{
-    padding: 5px 5px 5px 5px;
-    margin : 10px 15px 0px 0px;
+﻿.AspMenuItem {
     background-color: darkgray;
     color: white;
     font-family: 'Segoe UI';
-    font-size:16px;
+    font-size: 16px;
+    margin: 10px 15px 0px 0px;
+    padding: 5px 5px 5px 5px;
 }
 
-.AspSubMenuItem 
-{
-    padding: 5px 5px 5px 5px;
+.AspSubMenuItem {
     background-color: darkgray;
     color: white;
     font-family: 'Segoe UI Symbol';
+    padding: 5px 5px 5px 5px;
 }
 
 
 .AspThirdMenuItem {
-    padding: 5px 5px 5px 5px;
     background-color: darkgray;
     color: white;
     font-family: 'Segoe UI Symbol';
+    padding: 5px 5px 5px 5px;
 }
 
-.LabSitePageTitle 
-{
-    color:black;
+.LabSitePageTitle {
+    color: black;
     font-family: 'Segoe UI Symbol';
-    font-size:35px;
-    padding-left:50px;
+    font-size: 35px;
+    padding-left: 50px;
 }
 
-.LabSitePageTitle2
- {
-    color:blue;
+.LabSitePageTitle2 {
+    color: blue;
     font-family: 'Segoe UI Symbol';
-    font-size:25px;
-    padding:10px
+    font-size: 25px;
+    padding: 10px
 }
 
-.LabSiteZoneTexteClient
- {
-    color:white;
-    background-color:gray;
-    border-radius:10px;
-    font-style: italic;
+.LabSiteZoneTexteClient {
+    background-color: gray;
+    border-radius: 10px;
+    color: white;
     font-family: 'Segoe UI';
+    font-style: italic;
 }
 
-.LabSiteZoneProjet
-{
-    border:2px dashed gray;
-    padding:8px;
-    margin-top:15px;
+.LabSiteZoneProjet {
+    border: 2px dashed gray;
+    margin-top: 15px;
+    padding: 8px;
 }

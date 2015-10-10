@@ -1,29 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
+using System.Web.UI;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Owin;
-using MSLab.Models;
 
 namespace MSLab.Account
 {
-    public partial class Manage : System.Web.UI.Page
+    public partial class Manage : Page
     {
-        protected string SuccessMessage
-        {
-            get;
-            private set;
-        }
-
-        private bool HasPassword(ApplicationUserManager manager)
-        {
-            return manager.HasPassword(User.Identity.GetUserId());
-        }
+        protected string SuccessMessage { get; private set; }
 
         public bool HasPhoneNumber { get; private set; }
 
@@ -33,11 +18,16 @@ namespace MSLab.Account
 
         public int LoginsCount { get; set; }
 
+        private bool HasPassword(ApplicationUserManager manager)
+        {
+            return manager.HasPassword(User.Identity.GetUserId());
+        }
+
         protected void Page_Load()
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
-            HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
+            HasPhoneNumber = string.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
 
             // Enable this after setting up two-factor authentientication
             //PhoneNumber.Text = manager.GetPhoneNumber(User.Identity.GetUserId()) ?? String.Empty;
@@ -69,13 +59,18 @@ namespace MSLab.Account
                     Form.Action = ResolveUrl("~/Account/Manage");
 
                     SuccessMessage =
-                        message == "ChangePwdSuccess" ? "Your password has been changed."
-                        : message == "SetPwdSuccess" ? "Your password has been set."
-                        : message == "RemoveLoginSuccess" ? "The account was removed."
-                        : message == "AddPhoneNumberSuccess" ? "Phone number has been added"
-                        : message == "RemovePhoneNumberSuccess" ? "Phone number was removed"
-                        : String.Empty;
-                    successMessage.Visible = !String.IsNullOrEmpty(SuccessMessage);
+                        message == "ChangePwdSuccess"
+                            ? "Your password has been changed."
+                            : message == "SetPwdSuccess"
+                                ? "Your password has been set."
+                                : message == "RemoveLoginSuccess"
+                                    ? "The account was removed."
+                                    : message == "AddPhoneNumberSuccess"
+                                        ? "Phone number has been added"
+                                        : message == "RemovePhoneNumberSuccess"
+                                            ? "Phone number was removed"
+                                            : string.Empty;
+                    successMessage.Visible = !string.IsNullOrEmpty(SuccessMessage);
                 }
             }
         }
@@ -102,7 +97,7 @@ namespace MSLab.Account
             var user = manager.FindById(User.Identity.GetUserId());
             if (user != null)
             {
-                signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                signInManager.SignIn(user, false, false);
                 Response.Redirect("/Account/Manage?m=RemovePhoneNumberSuccess");
             }
         }

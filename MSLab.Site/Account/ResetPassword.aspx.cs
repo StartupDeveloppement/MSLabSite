@@ -4,22 +4,16 @@ using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using Owin;
-using MSLab.Models;
 
 namespace MSLab.Account
 {
     public partial class ResetPassword : Page
     {
-        protected string StatusMessage
-        {
-            get;
-            private set;
-        }
+        protected string StatusMessage { get; private set; }
 
         protected void Reset_Click(object sender, EventArgs e)
         {
-            string code = IdentityHelper.GetCodeFromRequest(Request);
+            var code = IdentityHelper.GetCodeFromRequest(Request);
             if (code != null)
             {
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();

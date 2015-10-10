@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:MSLab.WPF.UI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>

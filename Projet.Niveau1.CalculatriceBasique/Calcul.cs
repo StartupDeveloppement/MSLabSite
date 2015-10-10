@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Projet.Niveau1.CalculatriceBasique
+﻿namespace Projet.Niveau1.CalculatriceBasique
 {
     public class Calcul
     {
-        private int premierChiffre;
-        private int secondChiffre;
+        private readonly int premierChiffre;
+        private readonly int secondChiffre;
 
         public Calcul(int premierChiffre, int secondChiffre)
         {
@@ -21,6 +15,5 @@ namespace Projet.Niveau1.CalculatriceBasique
         {
             return premierChiffre + secondChiffre;
         }
-
     }
 }

@@ -8,9 +8,9 @@
         Title="MainWindow" Height="350" Width="525">
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Horizontal">
-            <Button Content="Quelle heure est-il ?" Name="ButtonWhatTime" Click="ButtonWhatTime_Click"></Button>
-            <Label Name="LabelTime" Width="200"></Label>
+            <Button Content="Quelle heure est-il ?" Name="ButtonWhatTime" Click="ButtonWhatTime_Click" />
+            <Label Name="LabelTime" Width="200" />
         </StackPanel>
-        
+
     </StackPanel>
 </Window>
