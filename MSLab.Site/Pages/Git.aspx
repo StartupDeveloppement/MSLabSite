@@ -31,4 +31,5 @@
         NavigateUrl="~/Resources/Git/msysgitVS.exe"
         Text="Extension Git"
         runat="server" />
+    <asp:Label runat="server" Text="<br />Install puis Accept et attendre la fin de l'installation puis Finish et Exit"></asp:Label>
 </asp:Content>
