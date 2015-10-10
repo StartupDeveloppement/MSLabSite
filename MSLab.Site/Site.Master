@@ -44,32 +44,6 @@
                 </button>
                 <a class="navbar-brand" runat="server" href="~/">Laboratoire Developpement - Microsoft</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-                <asp:LoginView runat="server" ViewStateMode="Disabled">
-                    <AnonymousTemplate>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a runat="server" href="~/Account/Register">Register</a>
-                            </li>
-                            <li>
-                                <a runat="server" href="~/Account/Login">Log in</a>
-                            </li>
-                        </ul>
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName() %> !</a>
-                            </li>
-                            <li>
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut"/>
-                            </li>
-                        </ul>
-                    </LoggedInTemplate>
-                </asp:LoginView>
-            </div>
         </div>
     </div>
     <div class="navbar navbar-inverse" style="background-color: darkgray">
@@ -88,6 +62,8 @@
                         <asp:MenuItem Text="Startup Pack">
                             <asp:MenuItem NavigateUrl="~/Pages/Start.aspx" Text="Start !"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/Pages/Git.aspx" Text="Git"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/GitBash.aspx" Text="GitBash"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/TortoiseGit.aspx" Text="TortoiseGit"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/Pages/VisualStudio.aspx" Text="Visual Studio"></asp:MenuItem>
                         </asp:MenuItem>
                         <asp:MenuItem Text="Microsoft Technologies">
