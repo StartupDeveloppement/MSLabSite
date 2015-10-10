@@ -203,6 +203,7 @@
     <Content Include="Pages\WCF.aspx" />
     <Content Include="Pages\WinForms.aspx" />
     <Content Include="Pages\WPF.aspx" />
+    <Content Include="Resources\GitBash\GitBash_Use_1.PNG" />
     <Content Include="Resources\Git\Git_Install_1.PNG" />
     <Content Include="Resources\Git\Git_Install_2.PNG" />
     <Content Include="Resources\Git\Git_Install_3.PNG" />
