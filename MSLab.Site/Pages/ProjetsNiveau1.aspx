@@ -15,7 +15,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Image runat="server" ImageUrl="~/Resources/ProjetsNiveau1/ProjetNiveau1_Calculatrice_1.PNG" />
+                    <asp:Image runat="server" ImageUrl="~/Resources/ProjetsNiveau1/ProjetNiveau1_Calculatrice_1.PNG"/>
                 </td>
             </tr>
         </table>

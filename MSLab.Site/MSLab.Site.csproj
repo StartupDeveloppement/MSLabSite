@@ -188,6 +188,7 @@
     <Content Include="Pages\AspWebForms.aspx" />
     <Content Include="Pages\Console.aspx" />
     <Content Include="Pages\Git.aspx" />
+    <Content Include="Pages\GitBash.aspx" />
     <Content Include="Pages\ProjetsNiveau1.aspx" />
     <Content Include="Pages\ProjetsNiveau2.aspx" />
     <Content Include="Pages\ProjetsNiveau3.aspx" />
@@ -197,11 +198,30 @@
     <None Include="Properties\PublishProfiles\TestPublish.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Pages\Technologies.aspx" />
+    <Content Include="Pages\TortoiseGit.aspx" />
     <Content Include="Pages\VisualStudio.aspx" />
     <Content Include="Pages\WCF.aspx" />
     <Content Include="Pages\WinForms.aspx" />
     <Content Include="Pages\WPF.aspx" />
+    <Content Include="Resources\GitBash\GitBash_Use_1.PNG" />
+    <Content Include="Resources\Git\Git_Install_1.PNG" />
+    <Content Include="Resources\Git\Git_Install_2.PNG" />
+    <Content Include="Resources\Git\Git_Install_3.PNG" />
+    <Content Include="Resources\Git\Git_Install_4.PNG" />
+    <Content Include="Resources\Git\Git_Install_5.PNG" />
+    <Content Include="Resources\Git\Git_Install_6.PNG" />
+    <Content Include="Resources\Git\Git_Install_7.PNG" />
+    <Content Include="Resources\Git\Git_Install_8.PNG" />
+    <Content Include="Resources\Git\Git_Install_9.PNG" />
+    <Content Include="Resources\Git\msysgitVS.exe" />
     <Content Include="Resources\ProjetsNiveau1\ProjetNiveau1_Calculatrice_1.PNG" />
+    <Content Include="Resources\TortoiseGit\TortoiseGit_Clone_1.png" />
+    <Content Include="Resources\TortoiseGit\TortoiseGit_Clone_2.PNG" />
+    <Content Include="Resources\TortoiseGit\TortoiseGit_Commands.png" />
+    <Content Include="Resources\TortoiseGit\TortoiseGit_Install_1.PNG" />
+    <Content Include="Resources\TortoiseGit\TortoiseGit_Install_2.PNG" />
+    <Content Include="Resources\TortoiseGit\TortoiseGit_Install_3.PNG" />
+    <Content Include="Resources\TortoiseGit\TortoiseGit_State.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -412,6 +432,13 @@
     <Compile Include="Pages\Git.aspx.designer.cs">
       <DependentUpon>Git.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\GitBash.aspx.cs">
+      <DependentUpon>GitBash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GitBash.aspx.designer.cs">
+      <DependentUpon>GitBash.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProjetsNiveau1.aspx.cs">
       <DependentUpon>ProjetsNiveau1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -460,6 +487,13 @@
     </Compile>
     <Compile Include="Pages\Technologies.aspx.designer.cs">
       <DependentUpon>Technologies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TortoiseGit.aspx.cs">
+      <DependentUpon>TortoiseGit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TortoiseGit.aspx.designer.cs">
+      <DependentUpon>TortoiseGit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\VisualStudio.aspx.cs">
       <DependentUpon>VisualStudio.aspx</DependentUpon>
