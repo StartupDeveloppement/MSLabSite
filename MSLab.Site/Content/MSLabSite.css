@@ -29,15 +29,31 @@
     color:black;
     font-family: 'Segoe UI Symbol';
     font-size:35px;
-    padding-left:50px;
+    padding:0px 50px 20px 50px;
 }
 
 .LabSitePageTitle2
  {
-    color:blue;
+    color:orangered;
     font-family: 'Segoe UI Symbol';
     font-size:25px;
-    padding:10px
+    padding:16px;
+}
+
+.LabSitePageTitle3
+ {
+    color:blue;
+    font-family: 'Segoe UI Symbol';
+    font-size:20px;
+    padding:18px;
+}
+
+.LabSitePageTitle4
+ {
+    color:green;
+    font-family: 'Segoe UI Symbol';
+    font-size:16px;
+    padding:20px;
 }
 
 .LabSiteZoneTexteClient
@@ -46,12 +62,23 @@
     background-color:gray;
     border-radius:10px;
     font-style: italic;
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI';      
+    padding:5px;
 }
 
 .LabSiteZoneProjet
 {
-    border:2px dashed gray;
-    padding:8px;
-    margin-top:15px;
+    border:2px dashed orangered;
+    padding:10px 10px 10px 10px;
+    margin-top:15px;  
+}
+
+.LabSiteZoneConseil
+{
+    background-color:khaki;
+    font-style: italic;
+    color:black;
+    border-radius:8px;
+    padding:2px 0px 2px 0px;
+    text-align:center;
 }

@@ -113,9 +113,9 @@
                 </div>
             </div>
         </div>
-
-        <asp:Label ID="PageTitle" runat="server" CssClass="LabSitePageTitle"></asp:Label>
-
+        <div class="LabSitePageTitle">
+            <asp:Label ID="PageTitle" runat="server"></asp:Label>
+        </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
