@@ -4,7 +4,9 @@
 
 <html lang="en">
 <head runat="server">
-    <title><%: string.Format("Laboratoire Dev > {0}", Page.Title) %></title>
+    <title>
+        <%: string.Format("Laboratoire Dev > {0}", Page.Title) %>
+    </title>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -57,7 +59,7 @@
                             <asp:MenuItemStyle CssClass="AspMenuItemSelected" />
                         </LevelSelectedStyles>
                         <Items>
-                            <asp:MenuItem Text="Startup Pack">
+                            <asp:MenuItem Text="Startup Pack" >
                                 <asp:MenuItem NavigateUrl="~/Pages/Start.aspx" Text="Start !"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/Pages/Git.aspx" Text="Git"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/Pages/TortoiseGit.aspx" Text="TortoiseGit"></asp:MenuItem>
