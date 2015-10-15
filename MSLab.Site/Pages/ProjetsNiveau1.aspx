@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="LabSiteZoneConseil">
-            <asp:Label runat="server" Text="Toutes les solutions de projets débutants sont fournies" CssClass=""></asp:Label>
+        <asp:Label runat="server" Text="Toutes les solutions de projets débutants sont fournies" CssClass=""></asp:Label>
     </div>
     <div class="LabSiteZoneProjet">
         <table>
@@ -10,12 +10,12 @@
                 <td>
                     <div class="LabSitePageTitle2">
                         <asp:Label runat="server" Text="Projet console : calculatrice"></asp:Label>
-                    </div>                    
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <asp:Image runat="server" ImageUrl="~/Resources/ProjetsNiveau1/ProjetNiveau1_Calculatrice_1.PNG"/>
+                    <asp:Image runat="server" ImageUrl="~/Resources/ProjetsNiveau1/ProjetNiveau1_Calculatrice_1.PNG" />
                 </td>
             </tr>
         </table>
@@ -44,7 +44,59 @@
                 </tr>
                 <tr>
                     <td>
+                        <asp:Label runat="server" Text="-Catégorie pro/perso"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <asp:Label runat="server" Text="-Avoir un client graphiquement avancé"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="LabSiteZoneProjet">
+        <table>
+            <tr>
+                <td>
+                    <div class="LabSitePageTitle2">
+                        <asp:Label runat="server" Text="Projet console : repertoire"></asp:Label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Image runat="server" ImageUrl="~/Resources/ProjetsNiveau1/ProjetNiveau1_Repertoire_1.PNG" />
+                </td>
+            </tr>
+        </table>
+        <div class="LabSiteZoneTexteClient">
+            <table>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Le client souhaiterais ajouter des fonctions à son repertoire:"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Ajouter le numero de téléphone"></asp:Label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Ajouter l'adresse"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Supprimer un élément donné"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Ouvrir et enregistrer un fichier"></asp:Label>
                     </td>
                 </tr>
             </table>

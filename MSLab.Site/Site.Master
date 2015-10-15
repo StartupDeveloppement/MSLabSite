@@ -60,7 +60,6 @@
                             <asp:MenuItem Text="Startup Pack">
                                 <asp:MenuItem NavigateUrl="~/Pages/Start.aspx" Text="Start !"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/Pages/Git.aspx" Text="Git"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/Pages/GitBash.aspx" Text="GitBash"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/Pages/TortoiseGit.aspx" Text="TortoiseGit"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/Pages/VisualStudio.aspx" Text="Visual Studio"></asp:MenuItem>
                             </asp:MenuItem>

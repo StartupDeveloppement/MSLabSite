@@ -188,7 +188,6 @@
     <Content Include="Pages\AspWebForms.aspx" />
     <Content Include="Pages\Console.aspx" />
     <Content Include="Pages\Git.aspx" />
-    <Content Include="Pages\GitBash.aspx" />
     <Content Include="Pages\ProjetsNiveau1.aspx" />
     <Content Include="Pages\ProjetsNiveau2.aspx" />
     <Content Include="Pages\ProjetsNiveau3.aspx" />
@@ -215,6 +214,7 @@
     <Content Include="Resources\Git\Git_Install_9.PNG" />
     <Content Include="Resources\Git\msysgitVS.exe" />
     <Content Include="Resources\ProjetsNiveau1\ProjetNiveau1_Calculatrice_1.PNG" />
+    <Content Include="Resources\ProjetsNiveau1\ProjetNiveau1_Repertoire_1.PNG" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Clone_1.png" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Clone_2.PNG" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Commands.png" />
@@ -431,13 +431,6 @@
     </Compile>
     <Compile Include="Pages\Git.aspx.designer.cs">
       <DependentUpon>Git.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\GitBash.aspx.cs">
-      <DependentUpon>GitBash.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\GitBash.aspx.designer.cs">
-      <DependentUpon>GitBash.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProjetsNiveau1.aspx.cs">
       <DependentUpon>ProjetsNiveau1.aspx</DependentUpon>

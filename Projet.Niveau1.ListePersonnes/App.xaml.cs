@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Projet.Niveau1.ListePersonnes
+namespace Projet.Niveau1.Repertoire
 {
     /// <summary>
     /// Interaction logic for App.xaml
