@@ -1,13 +1,15 @@
 ﻿<%@ Page Title="TortoiseGit" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TortoiseGit.aspx.cs" Inherits="MSLab.Site.Pages.TortoiseGit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Label runat="server" CssClass="LabSitePageTitle2" Text="Installation"></asp:Label>
+    <br />
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Tortoise est une surcouche pour les icones windows basé sur le statut Git des fichiers"></asp:Label>
+    <br />
     <asp:Label runat="server" Text="Afin d'utiliser Git, il faut installer l'outil pour y acceder :  " CssClass="LabSiteZoneConseil"></asp:Label>
     <asp:HyperLink ID="hyperlink1"
         NavigateUrl="https://tortoisegit.org"
         Text="https://tortoisegit.org"
         runat="server" />
-    <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Double clic sur le fichier téléchargé puis faire next :" />
     <br />
     <asp:Image runat="server" ImageUrl="~/Resources/TortoiseGit/TortoiseGit_Install_1.PNG" />
     <br />
@@ -19,15 +21,17 @@
     <br />
     <asp:Image runat="server" ImageUrl="~/Resources/TortoiseGit/TortoiseGit_Install_3.PNG" />
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Il faut ensuite ouvrir une fenetre explorer et de determiner un répertoire cible du répo GitHub."></asp:Label>
+    <asp:Label runat="server" CssClass="LabSitePageTitle2" Text="Cloner un repository"></asp:Label>
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Il ne faut pas créer un dossier correspondant au nom du projet, TortoiseGit va le faire pour vous."></asp:Label>
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Cloner le repository est l'étape initiale qui permet d'instancier le lien avec le repository cible du serveur GitHub"></asp:Label>
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Clic droit dans la fenêtre puis Git Clone :"></asp:Label>
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Les fonctions disponibles depuis le menu contextuel de windows (clic droit)"></asp:Label>
+    <br />
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Nous nous servirons ici presque uniquement de la fonction Git Clone"></asp:Label>
     <br />
     <asp:Image runat="server" ImageUrl="~/Resources/TortoiseGit/TortoiseGit_Clone_1.png" />
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="<br />Faire Ok et vos identifiants GitHub vous serons demandés et le répertoire sera créé :"></asp:Label>
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Faire Ok et vos identifiants GitHub vous serons demandés et le répertoire sera créé :"></asp:Label>
     <br />
     <asp:Image runat="server" ImageUrl="~/Resources/TortoiseGit/TortoiseGit_Clone_2.png" />
     <br />
@@ -39,23 +43,13 @@
     <br />
     <asp:Image runat="server" ImageUrl="~/Resources/TortoiseGit/TortoiseGit_Commands.png" />
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="<br />Pull : Permet de rapatrier les denières modifications venant de GitHub"></asp:Label>
-    <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Fetch : Permet de "></asp:Label>
-    <br />
     <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Push : Permet d'envoyer les commits sur GitHub"></asp:Label>
     <br />
     <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Pull : Permet de rapatrier les denières modifications venant de GitHub"></asp:Label>
     <br />
     <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Show log : Permet de lister tous les commits d'une branche"></asp:Label>
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Stash save : Permet de sauvegarder un état à un instant T et de pouvoir le reprendre si un collègue vient vous demander de l'aide et que vous faite le fix sur votre ordinateur"></asp:Label>
-    <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Resolve : Permet de résoudre les conflits suite à un pull"></asp:Label>
-    <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Revert : Permet de revenir en arriere"></asp:Label>
-    <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Clean up : Permet de nettoyer tous les répertoires bin et obj du répo"></asp:Label>
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Revert : Restore le fichier à sa valeur de commit"></asp:Label>
     <br />
     <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Switch/Checkout : Permet de changer de branche, et d'obtenir une branche venant de GitBuh "></asp:Label>
     <br />

@@ -7,7 +7,7 @@
     <table class="LabSiteTableau">
         <tr>
             <td>
-                <asp:HyperLink runat="server" Text="Git" NavigateUrl="~/Pages/GIT.aspx"/>
+                <asp:HyperLink runat="server" Text="Git/Github" NavigateUrl="~/Pages/GIT.aspx"/>
                 <asp:Label runat="server" Text=" : controle de sources pour gérer le projet à plusieurs"></asp:Label>
             </td>
             <td>
@@ -20,7 +20,9 @@
             </td>
         </tr>
         <tr>
-            <td></td>
+            <td>
+                <asp:Image runat="server" ImageUrl="~/Resources/Start/Start_GitHub.png" Width="400" Height="300" />
+            </td>
             <td>
                 <asp:Image runat="server" ImageUrl="~/Resources/Start/Start_VisualStudio.png" Width="400" Height="300" />
             </td>
