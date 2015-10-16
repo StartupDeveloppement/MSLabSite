@@ -199,6 +199,7 @@
     <Content Include="Pages\SqlServer.aspx" />
     <Content Include="Pages\SSIS.aspx" />
     <Content Include="Pages\Start.aspx" />
+    <None Include="Properties\PublishProfiles\MSLabSite.pubxml" />
     <None Include="Properties\PublishProfiles\TestPublish.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Pages\Technologies.aspx" />
@@ -265,7 +266,9 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
