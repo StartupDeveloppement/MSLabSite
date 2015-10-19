@@ -32,7 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{045ABB52-537
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{5F562121-3AA5-45DF-AD00-EFFA310202D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projet.Niveau1.ListePersonnes", "Projet.Niveau1.ListePersonnes\Projet.Niveau1.ListePersonnes.csproj", "{D2C0EF72-6418-4F5B-92B6-247AC7F9CB46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projet.Niveau1.Repertoire", "Projet.Niveau1.Repertoire\Projet.Niveau1.Repertoire.csproj", "{D2C0EF72-6418-4F5B-92B6-247AC7F9CB46}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projets Niveau 2", "Projets Niveau 2", "{EEBF140C-B91D-4679-8593-9F94D5B2AFEC}"
 EndProject
