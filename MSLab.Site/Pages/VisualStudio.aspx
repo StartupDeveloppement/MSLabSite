@@ -4,9 +4,9 @@
     <br />
     <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio 2010 à la version 10"></asp:Label>
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio 2012 à la version 12"></asp:Label>
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio 2012 à la version 11"></asp:Label>
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio 2013 à la version 13"></asp:Label>
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio 2013 à la version 12"></asp:Label>
     <br />
     <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio 2015 à la version 14"></asp:Label>
 
