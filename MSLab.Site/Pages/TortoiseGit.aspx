@@ -35,9 +35,7 @@
     <br />
     <asp:Image runat="server" ImageUrl="~/Resources/TortoiseGit/TortoiseGit_Clone_2.png" />
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="<br /> NB : Si votre projet existe, il suffit de faire TortoiseGit puis Add et Git Commit puis Push"></asp:Label>
-    <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="<br />"></asp:Label>
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="NB : Si votre projet existe, il suffit de faire TortoiseGit puis Add et Git Commit puis Push"></asp:Label>
     <br />
     <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Voici la liste de toutes les commandes et les actions : "></asp:Label>
     <br />

@@ -1,8 +1,25 @@
 ﻿<%@ Page Title="Visual Studio" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="VisualStudio.aspx.cs" Inherits="MSLab.Site.Pages.VisualStudio" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio possède des numéros de version qu'il faut connaitre : "></asp:Label>
+    <asp:Label runat="server" CssClass="LabSitePageTitle2" Text="Téléchargement & Installation"></asp:Label>
     <br />
-    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio 2010 à la version 10"></asp:Label>
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio est disponible en téléchargement depuis la plateforme DreamSpark."></asp:Label>
+    <br />
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Connectez vous sur votre espace extranet Ynov :"></asp:Label>
+    <asp:HyperLink runat="server" Text="http://extranet.ynov.com/" NavigateUrl="http://extranet.ynov.com/"></asp:HyperLink>
+    <br />
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Entrez sur le portail des offres Microsoft puis sur le programme DreamSpark"></asp:Label>
+    <br />
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Trouvez Visual Studio 2015 Enterprise, choisissez la langue d'installation et ajoutez à votre panier :"></asp:Label>
+    <br />
+    <asp:Image runat="server" ImageUrl="~/Resources/VisualStudio/VisualStudio_0.png" Width="500" Height="200" />
+    <br />
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Poursuivez la commande jusqu'a téléchargement d'un Iso contenant VS :"></asp:Label>
+    <br />
+    <asp:Image runat="server" ImageUrl="~/Resources/VisualStudio/VisualStudio_1.png" Width="500" Height="200" />
+    <br />
+    <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Une fois téléchargé, vous pouvez monter l'Iso avec le logiciel Clone Drive et installer le contenu."></asp:Label>
+    <asp:HyperLink runat="server">http://www.slysoft.com/fr/virtual-clonedrive.html</asp:HyperLink>
     <br />
     <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Visual Studio 2012 à la version 11"></asp:Label>
     <br />
@@ -34,6 +51,8 @@
     <asp:Label runat="server" Text="Settings : Permet de parametrer les settings du répo local et celui de toute la session en cours ."></asp:Label>
 
     <br />
+    <asp:Label runat="server" Text="Extensions" CssClass="LabSitePageTitle2" />
+        <br />
     <asp:Label runat="server" Text="Les extensions sont accessibles graçe au Menu Tools puis Extensions and Updates"></asp:Label>
     <br />
     <asp:Label runat="server" Text="Installed est la liste des extensions installés"></asp:Label>

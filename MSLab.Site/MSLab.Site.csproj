@@ -209,6 +209,7 @@
     <Content Include="Pages\WinForms.aspx" />
     <Content Include="Pages\WPF.aspx" />
     <Content Include="Resources\GitBash\GitBash_Use_1.PNG" />
+    <Content Include="Resources\Git\Git_0.png" />
     <Content Include="Resources\Git\Git_Install_1.PNG" />
     <Content Include="Resources\Git\Git_Install_2.PNG" />
     <Content Include="Resources\Git\Git_Install_3.PNG" />
@@ -231,6 +232,8 @@
     <Content Include="Resources\TortoiseGit\TortoiseGit_Install_2.PNG" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Install_3.PNG" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_State.png" />
+    <Content Include="Resources\VisualStudio\VisualStudio_0.png" />
+    <Content Include="Resources\VisualStudio\VisualStudio_1.png" />
     <Content Include="Resources\WPF\WPF_1.png" />
     <Content Include="Resources\WPF\WPF_2.png" />
     <Content Include="Scripts\bootstrap.js" />
