@@ -39,6 +39,7 @@
     font-family: 'Segoe UI Symbol';
     font-size:25px;
     padding:16px;
+    text-decoration: underline;
 }
 
 .LabSitePageTitle3
@@ -95,6 +96,14 @@
 {
     padding:5px;
     border:solid 1px black;
+}
+
+.LabSiteImageIcon
+{    
+    width:24px;
+    height:24px;
+    border:1px solid black;
+    padding:1px;
 }
 
 .LabSiteImageSmall

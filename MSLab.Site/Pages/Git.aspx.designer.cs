@@ -13,6 +13,51 @@ namespace MSLab.Site.Pages {
     public partial class Git {
         
         /// <summary>
+        /// TitleInstallation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TitleInstallation;
+        
+        /// <summary>
+        /// ContentInstallation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel ContentInstallation;
+        
+        /// <summary>
+        /// CollapsiblePanelInstallation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelInstallation;
+        
+        /// <summary>
+        /// TitleGitVisual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TitleGitVisual;
+        
+        /// <summary>
+        /// ContentGitVisual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel ContentGitVisual;
+        
+        /// <summary>
         /// hyperlink2 control.
         /// </summary>
         /// <remarks>
@@ -20,5 +65,41 @@ namespace MSLab.Site.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hyperlink2;
+        
+        /// <summary>
+        /// CollapsiblePanelExtender1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender1;
+        
+        /// <summary>
+        /// TitleGitHub control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TitleGitHub;
+        
+        /// <summary>
+        /// ContentGitHub control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel ContentGitHub;
+        
+        /// <summary>
+        /// CollapsiblePanelExtender2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender2;
     }
 }

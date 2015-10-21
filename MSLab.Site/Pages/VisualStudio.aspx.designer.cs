@@ -11,5 +11,59 @@ namespace MSLab.Site.Pages {
     
     
     public partial class VisualStudio {
+        
+        /// <summary>
+        /// TitleInstallation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TitleInstallation;
+        
+        /// <summary>
+        /// ContentInstallation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel ContentInstallation;
+        
+        /// <summary>
+        /// CollapsiblePanelExtender2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender2;
+        
+        /// <summary>
+        /// TitleExtensions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TitleExtensions;
+        
+        /// <summary>
+        /// ContentExtensions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel ContentExtensions;
+        
+        /// <summary>
+        /// CollapsiblePanelExtender1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender1;
     }
 }
