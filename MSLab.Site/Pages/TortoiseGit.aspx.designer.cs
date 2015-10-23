@@ -49,6 +49,33 @@ namespace MSLab.Site.Pages {
         protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelInstallation;
         
         /// <summary>
+        /// TitleFonctionnement control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TitleFonctionnement;
+        
+        /// <summary>
+        /// ContentFonctionnement control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel ContentFonctionnement;
+        
+        /// <summary>
+        /// CollapsiblePanelFonctionnement control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelFonctionnement;
+        
+        /// <summary>
         /// TitleCloneRepository control.
         /// </summary>
         /// <remarks>

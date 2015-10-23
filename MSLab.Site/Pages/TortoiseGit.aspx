@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="TortoiseGit" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TortoiseGit.aspx.cs" Inherits="MSLab.Site.Pages.TortoiseGit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
     <asp:Label runat="server" CssClass="LabSitePageTitle2" Text="Installation" ID="TitleInstallation" />
     <asp:Panel runat="server" ID="ContentInstallation">
         <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Tortoise est une surcouche pour les icones windows basé sur le statut Git des fichiers"></asp:Label>
@@ -31,6 +32,21 @@
         CollapseControlID="TitleInstallation"
         ExpandControlID="TitleInstallation" />
     <br />
+
+    <asp:Label runat="server" CssClass="LabSitePageTitle2" Text="Fonctionnement" ID="TitleFonctionnement"/>
+    <asp:Panel runat="server" ID="ContentFonctionnement">  
+              <asp:Image runat="server" ImageUrl="~/Resources/TortoiseGit/TortoiseGit_Use.PNG" />
+    </asp:Panel>
+    <ajaxToolkit:CollapsiblePanelExtender runat="server" ID="CollapsiblePanelFonctionnement"
+        TargetControlID="ContentFonctionnement"
+        AutoCollapse="False"
+        AutoExpand="False"
+        ScrollContents="True"
+        Collapsed="True"
+        CollapseControlID="TitleFonctionnement"
+        ExpandControlID="TitleFonctionnement" />
+    <br />
+
     <asp:Label runat="server" CssClass="LabSitePageTitle2" Text="Cloner un repository" ID="TitleCloneRepository"></asp:Label>
     <asp:Panel runat="server" ID="ContentClonerRepository">
         <asp:Label runat="server" CssClass="LabSiteZoneConseil" Text="Cloner le repository est l'étape initiale qui permet d'instancier le lien avec le repository cible du serveur GitHub"></asp:Label>
@@ -77,5 +93,5 @@
         Collapsed="True"
         CollapseControlID="TitleCloneRepository"
         ExpandControlID="TitleCloneRepository" />
-    
+
 </asp:Content>

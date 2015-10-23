@@ -233,6 +233,7 @@
     <Content Include="Resources\TortoiseGit\TortoiseGit_Install_2.PNG" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Install_3.PNG" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_State.png" />
+    <Content Include="Resources\TortoiseGit\TortoiseGit_Use.png" />
     <Content Include="Resources\VisualStudio\VisualStudio_0.png" />
     <Content Include="Resources\VisualStudio\VisualStudio_1.png" />
     <Content Include="Resources\WPF\WPF_1.png" />

@@ -42,6 +42,11 @@
     text-decoration: underline;
 }
 
+.LabSitePageTitle2:hover
+{
+    cursor:pointer;
+}
+
 .LabSitePageTitle3
 {
     color:blue;
