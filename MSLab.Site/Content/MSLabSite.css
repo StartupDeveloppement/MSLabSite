@@ -63,6 +63,14 @@
     padding:20px;
 }
 
+.LabSiteZoneTexte
+{
+    color:black;
+    border-radius:10px;
+    font-style: italic;
+    font-family: 'Segoe UI';
+}
+
 .LabSiteZoneTexteClient
 {
     color:white;

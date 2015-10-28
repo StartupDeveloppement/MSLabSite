@@ -226,9 +226,11 @@
     <Content Include="Resources\Start\Start_GitHub.png" />
     <Content Include="Resources\Start\Start_TortoiseGit.png" />
     <Content Include="Resources\Start\Start_VisualStudio.png" />
+    <Content Include="Resources\TortoiseGit\Start_TortoiseGit_1.png" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Clone_1.png" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Clone_2.PNG" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Commands.png" />
+    <Content Include="Resources\TortoiseGit\TortoiseGit_Demo.gif" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Install_1.PNG" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Install_2.PNG" />
     <Content Include="Resources\TortoiseGit\TortoiseGit_Install_3.PNG" />
