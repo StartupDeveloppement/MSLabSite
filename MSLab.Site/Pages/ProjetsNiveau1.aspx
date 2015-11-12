@@ -55,6 +55,58 @@
             </table>
         </div>
     </div>
+    
+    <div class="LabSiteZoneProjet">
+        <table>
+            <tr>
+                <td>
+                    <div class="LabSitePageTitle2">
+                        <asp:Label runat="server" Text="Projet console : MoneyManagement"></asp:Label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Image runat="server" ImageUrl="~/Resources/ProjetsNiveau1/ProjetNiveau1_MoneyManagement_1.PNG" />
+                </td>
+            </tr>
+        </table>
+        <div class="LabSiteZoneTexteClient">
+            <table>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Le client souhaiterais ajouter des fonctions à son logiciel:"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Pouvoir utiliser des chiffres à virgule"></asp:Label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Faire différents types d'affichages"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Ajouter de la sécurité à l'application avec un identifiant/mot de passe"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Séparer la notion d'opération et de compte en banque avec un MoneyManager, le fichier Program.cs est l'intermédiaire entre ces deux parties"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Avoir un client graphiquement avancé"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
     <div class="LabSiteZoneProjet">
         <table>
