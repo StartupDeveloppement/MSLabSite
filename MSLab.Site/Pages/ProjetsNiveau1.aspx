@@ -28,28 +28,28 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Pouvoir utiliser des chiffres à virgule"></asp:Label>
+                        <asp:Label runat="server" Text="- Pouvoir utiliser des chiffres à virgule"></asp:Label>
 
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Faire différents types d'opérations"></asp:Label>
+                        <asp:Label runat="server" Text="- Faire différents types d'opérations"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Changer la couleur du texte selon le type de message"></asp:Label>
+                        <asp:Label runat="server" Text="- Changer la couleur du texte selon le type de message"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Gérer les exceptions"></asp:Label>
+                        <asp:Label runat="server" Text="- Gérer les exceptions"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Avoir un client graphiquement avancé"></asp:Label>
+                        <asp:Label runat="server" Text="- Avoir un client graphiquement avancé"></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -80,28 +80,28 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Pouvoir utiliser des chiffres à virgule"></asp:Label>
+                        <asp:Label runat="server" Text="- Pouvoir utiliser des chiffres à virgule"></asp:Label>
 
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Faire différents types d'affichages"></asp:Label>
+                        <asp:Label runat="server" Text="- Faire différents types d'opérations, gérer l'affichage correspondant (exemple : edf, gaz, mobile, salaire ...)"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Ajouter de la sécurité à l'application avec un identifiant/mot de passe"></asp:Label>
+                        <asp:Label runat="server" Text="- Ajouter de la sécurité à l'application avec un identifiant/mot de passe"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Séparer la notion d'opération et de compte en banque avec un MoneyManager, le fichier Program.cs est l'intermédiaire entre ces deux parties"></asp:Label>
+                        <asp:Label runat="server" Text="- Séparer la notion d'opération et de compte en banque avec un MoneyManager, le fichier Program.cs est l'intermédiaire entre ces deux parties"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Avoir un client graphiquement avancé"></asp:Label>
+                        <asp:Label runat="server" Text="- Avoir un client graphiquement avancé"></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -132,28 +132,28 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Ajouter le numero de téléphone"></asp:Label>
+                        <asp:Label runat="server" Text="- Ajouter le numero de téléphone"></asp:Label>
 
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Ajouter l'adresse"></asp:Label>
+                        <asp:Label runat="server" Text="- Ajouter l'adresse"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Supprimer un élément donné"></asp:Label>
+                        <asp:Label runat="server" Text="- Supprimer un élément donné"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Ouvrir et enregistrer un fichier"></asp:Label>
+                        <asp:Label runat="server" Text="- Ouvrir et enregistrer un fichier"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Catégorie pro/perso"></asp:Label>
+                        <asp:Label runat="server" Text="- Catégorie pro/perso"></asp:Label>
                     </td>
                 </tr>
             </table>
