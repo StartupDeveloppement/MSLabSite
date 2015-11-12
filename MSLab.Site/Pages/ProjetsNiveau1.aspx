@@ -44,7 +44,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="-Catégorie pro/perso"></asp:Label>
+                        <asp:Label runat="server" Text="-Gérer les exceptions"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -97,6 +97,11 @@
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="-Ouvrir et enregistrer un fichier"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="-Catégorie pro/perso"></asp:Label>
                     </td>
                 </tr>
             </table>
