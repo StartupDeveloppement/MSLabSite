@@ -222,6 +222,7 @@
     <Content Include="Resources\Git\Git_Install_9.PNG" />
     <Content Include="Resources\Git\msysgitVS.exe" />
     <Content Include="Resources\ProjetsNiveau1\ProjetNiveau1_Calculatrice_1.PNG" />
+    <Content Include="Resources\ProjetsNiveau1\ProjetNiveau1_MoneyManagement_1.png" />
     <Content Include="Resources\ProjetsNiveau1\ProjetNiveau1_Repertoire_1.PNG" />
     <Content Include="Resources\Start\Start_GitHub.png" />
     <Content Include="Resources\Start\Start_TortoiseGit.png" />
