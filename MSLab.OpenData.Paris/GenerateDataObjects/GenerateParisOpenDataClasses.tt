@@ -1,0 +1,119 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(SolutionDir)\MSLab.OpenData.Paris\bin\Release\MSLab.OpenData.Paris.Business.dll" #>
+<#@ assembly name="$(SolutionDir)\MSLab.OpenData.Paris\bin\Release\MSLab.OpenData.Paris.Data.dll" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="MSLab.OpenData.Paris.Connexion" #>
+<#@ import namespace="MSLab.OpenData.Paris.Data" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ output extension=".cs" #>
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using MSLab.OpenData.Paris.Data;
+
+namespace MSLab.OpenData.Paris.Connexion
+{	
+<#
+var datasets = Connect();
+List<string> listDatasets = new List<string>();
+
+foreach (var dataset in datasets.Result)
+{
+listDatasets.Add(dataset.datasetid.Replace("-",""));
+#>
+
+	public class <#= dataset.datasetid.Replace("-","") #>	
+	{
+		public string className {get {return "<#=dataset.datasetid#>" ;} }
+	<#
+	foreach (var field in dataset.fields)
+	{
+	if (!string.IsNullOrWhiteSpace(field.name))
+	{
+	#>
+	
+		public <#= convertType(field.@type) #> _<#=field.name#> { get; set; }
+	
+	<#
+	}
+	}
+	#>	
+	}
+<#
+}
+#>
+	public class ParisOpenDataContext
+	{
+	<#
+	foreach (var datasetName in listDatasets)
+	{
+	#>
+	public IEnumerable<<#=datasetName#>> <#=datasetName#>Dataset { get; set;}
+	<#
+	}
+	#>	
+	}
+	
+}
+
+<#+
+public static async Task<List<Dataset>> Connect()
+{
+return await GetResult();
+}
+#>
+
+<#+
+public static async Task<List<Dataset>>  GetResult()
+{
+ParisOpenData dataParis = new ParisOpenData();
+return await dataParis.GetDatasets();
+}
+#>
+
+
+<#+
+public static string convertType(string type)
+{
+	if (type.Equals("text"))
+	{
+		return "string";
+	}
+	if (type.Equals("int"))
+	{
+		return "int";
+	}
+	if (type.Equals("date") || type.Equals("datetime"))
+	{
+		return "DateTime";
+	}
+	if (type.Equals("double"))
+	{
+		return "double";
+	}
+	if (type.Equals("geo_point_2d"))
+	{
+		return "List<double>";
+	}
+	if (type.Equals("geo_shape"))
+	{
+		return "GeoShape";
+	}
+	if (type.Equals("file"))
+	{
+		return "string";
+	}
+	return type;
+}
+
+
+#>
+
+
+

@@ -7,7 +7,6 @@ namespace MSLab.Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Modification du code !!!!!!!
         }
     }
 }
