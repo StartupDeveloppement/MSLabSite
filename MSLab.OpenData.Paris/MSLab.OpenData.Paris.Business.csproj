@@ -30,12 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +54,25 @@
   <ItemGroup>
     <Compile Include="Connexion\ParisOpenData.cs" />
     <Compile Include="GenerateDataObjects\GenerateParisOpenDataClasses.cs">
+      <DependentUpon>GenerateParisOpenDataClasses.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GenerateParisOpenDataClasses.tt</DependentUpon>
     </Compile>
+    <Compile Include="GenerateDataObjects\T4Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MSLab.OpenData.Paris.Data\MSLab.OpenData.Paris.Data.csproj">
@@ -62,14 +81,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GenerateDataObjects\GenerateParisOpenDataClasses.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GenerateParisOpenDataClasses.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="GenerateDataObjects\GenerateParisOpenDataClasses.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GenerateParisOpenDataClasses.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

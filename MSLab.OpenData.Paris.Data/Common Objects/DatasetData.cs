@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace MSLab.OpenData.Paris.Data
 {
-    public class DatasetData : IParisOpenDatabase
+    public class DatasetData<T> : IParisOpenDatabase
     {
         public int nhits { get; set; }
 
         public Parameters parameters { get; set; }
 
-        public List<Record> records { get; set; }
+        public List<Record<T>> records { get; set; }
+
+        //public List<T> records { get;set;}
     }
 }

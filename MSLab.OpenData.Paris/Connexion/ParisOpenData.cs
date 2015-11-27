@@ -8,51 +8,67 @@ using MSLab.OpenData.Paris.Data;
 
 namespace MSLab.OpenData.Paris.Connexion
 {
-    public class ParisOpenData
+    internal class ParisOpenData
     {
         #region private properties
-        private string OpenDataBaseAdress = Data.Properties.Settings.Default.ParisOpenDataBaseAdresse;
+        private string OpenDataBaseAdress;
+        private int MaxRecordsByCall;
+
         private MediaTypeWithQualityHeaderValue jsonHeader = new MediaTypeWithQualityHeaderValue("application/json");
         #endregion
 
-        #region public methods  
+        public ParisOpenData()
+        {
+            OpenDataBaseAdress = Business.Properties.Settings.Default.ParisOpenDataBaseAdresse;
+            MaxRecordsByCall = Business.Properties.Settings.Default.MaxRecordsByCall;
+        }
 
-        public async Task<List<Dataset>> GetDatasets()
+        #region internal methods  
+
+        internal List<Dataset> GetDatasets()
         {
             using (var client = new HttpClient() { BaseAddress = new Uri(OpenDataBaseAdress) })
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(jsonHeader);
 
-                HttpResponseMessage apiResponse = await client.GetAsync(string.Format("{0}{1}", OpenDataBaseAdress, "datasets/1.0/search/?rows=100000"));
+                Task<HttpResponseMessage> apiResponse = client.GetAsync(string.Format("{0}{1}", OpenDataBaseAdress, "datasets/1.0/search/?rows=1000"));
 
-                if (apiResponse.IsSuccessStatusCode)
+                if (apiResponse.Result.IsSuccessStatusCode)
                 {
-                    var resultatJsonBrut = apiResponse.Content.ReadAsStringAsync().Result;
+                    var resultatJsonBrut = apiResponse.Result.Content.ReadAsStringAsync().Result;
                     return JsonConvert.DeserializeObject<DatasetDetail>(resultatJsonBrut).datasets;
                 }
                 return null;
             }
         }
 
-        public async Task<List<Record>> GetResults(Dataset dataset)
-        {
+        internal string getRecords(string datasetId, int datasetrows, int startingRecordNumber)
+        {            
+            if (datasetrows> MaxRecordsByCall)
+            {
+                if (datasetrows>startingRecordNumber )
+                    datasetrows = MaxRecordsByCall;
+                else
+                    datasetrows = datasetrows-startingRecordNumber;
+            }
+
+
             using (var client = new HttpClient() { BaseAddress = new Uri(OpenDataBaseAdress) })
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(jsonHeader);
 
-                HttpResponseMessage apiResponse = await client.GetAsync(string.Format("{0}{1}{2}{3}", "records/1.0/search/?dataset=", dataset.datasetid, "&rows=",dataset.metas.records_count));
+                Task<HttpResponseMessage> apiResponse = client.GetAsync(string.Format("records/1.0/search/?dataset={0}&rows={1}&start={2}", datasetId, datasetrows.ToString(),startingRecordNumber));
 
-                if (apiResponse.IsSuccessStatusCode)
+                if (apiResponse.Result.IsSuccessStatusCode)
                 {
-                    var resultatJsonBrut = apiResponse.Content.ReadAsStringAsync().Result;
-                    
-                    return JsonConvert.DeserializeObject<DatasetData>(resultatJsonBrut).records;
+                    return apiResponse.Result.Content.ReadAsStringAsync().Result;
                 }
                 return null;
             }
         }
-        #endregion 
+
+        #endregion
     }
 }

@@ -8,16 +8,17 @@
 <#@ import namespace="MSLab.OpenData.Paris.Connexion" #>
 <#@ import namespace="MSLab.OpenData.Paris.Data" #>
 <#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
 <#@ output extension=".cs" #>
+
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using MSLab.OpenData.Paris.Data;
+using MSLab.OpenData.Paris.Connexion;
 
-namespace MSLab.OpenData.Paris.Connexion
+namespace MSLab.OpenData.Paris.GeneratedClasses
 {	
 <#
 var datasets = Connect();
@@ -28,18 +29,18 @@ foreach (var dataset in datasets.Result)
 listDatasets.Add(dataset.datasetid.Replace("-",""));
 #>
 
-	public class <#= dataset.datasetid.Replace("-","") #>	
+	public class <#= dataset.datasetid.Replace("-","") #> 
 	{
-		public string className {get {return "<#=dataset.datasetid#>" ;} }
+        public static int recordNumber =<#= dataset.metas.records_count #>;
+
+        public static string datasetid ="<#=dataset.datasetid#>";
 	<#
 	foreach (var field in dataset.fields)
 	{
 	if (!string.IsNullOrWhiteSpace(field.name))
 	{
 	#>
-	
-		public <#= convertType(field.@type) #> _<#=field.name#> { get; set; }
-	
+	<#= GetProperty(field) #>		
 	<#
 	}
 	}
@@ -48,18 +49,70 @@ listDatasets.Add(dataset.datasetid.Replace("-",""));
 <#
 }
 #>
-	public class ParisOpenDataContext
+	public class ParisOpenDataContext : IDisposable
 	{
+		private MediaTypeWithQualityHeaderValue jsonHeader ;
+		private ParisOpenData dataParis;
+		private bool disposed = false;
+
+		public ParisOpenDataContext()
+        {
+            dataParis = new ParisOpenData();
+            jsonHeader = new MediaTypeWithQualityHeaderValue("application/json");
+        }
+	
 	<#
 	foreach (var datasetName in listDatasets)
 	{
 	#>
-	public IEnumerable<<#=datasetName#>> <#=datasetName#>Dataset { get; set;}
+	public IEnumerable<Record<<#=datasetName#>>> <#=datasetName#>Dataset
+		{ 
+			get 
+			{
+				List<Record<<#=datasetName#>>> result = new List<Record<<#=datasetName#>>>();
+                List<string> resultatJsonBrut = new List<string>();
+				for (int i = 0; i < <#=datasetName#>.recordNumber; i+=10000)
+                {
+                    resultatJsonBrut.Add(dataParis.getRecords(<#=datasetName#>.datasetid, <#=datasetName#>.recordNumber,i));
+                }
+
+				if (resultatJsonBrut==null)
+				{
+					return null;
+				}
+				else
+				{
+					foreach (var jsonResult in resultatJsonBrut)
+					{
+						foreach (var recordList in JsonConvert.DeserializeObject<DatasetData<<#=datasetName#>>>(jsonResult).records)
+						{
+							result.Add(recordList);
+						} 
+					}
+					return result;
+				}			
+			}
+		}
 	<#
 	}
 	#>	
+		public void Dispose()
+		{
+			Dispose(true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected virtual void Dispose(bool disposing)
+		{
+			if (!disposed)
+			{
+				if (disposing)
+				{
+				}
+				disposed = true;
+			}
+		}
 	}
-	
 }
 
 <#+
@@ -111,9 +164,29 @@ public static string convertType(string type)
 	}
 	return type;
 }
-
-
 #>
 
+<#+
+public static int convertToInt(string stringToConvert)
+{
+return Convert.ToInt32(stringToConvert);
+}
+#>
 
+<#+
+public static string GetProperty(Field field)
+{
+if (field.name.Equals("public") || field.name.Equals("pim"))
+{
+	return "";
+}
+
+if (Regex.IsMatch(field.name, @"^\d"))
+{
+return "";
+} 
+
+return string.Format("public {0} {1} {2}", convertType(field.@type), field.name, "{ get; set; }");
+}
+ #>
 

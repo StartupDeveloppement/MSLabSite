@@ -21,7 +21,5 @@ namespace MSLab.OpenData.Paris.Data
         public GeoShape geo_shape { get; set; }
         public string type_de_poste_public { get; set; }
         public List<double> position { get; set; }
-        public int nombre_d_ordinateurs { get; set; }
-        public string etablissement { get; set; }
     }
 }
