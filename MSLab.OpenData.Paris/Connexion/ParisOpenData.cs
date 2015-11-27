@@ -13,15 +13,17 @@ namespace MSLab.OpenData.Paris.Connexion
         #region private properties
         private string OpenDataBaseAdress;
         private int MaxRecordsByCall;
-
         private MediaTypeWithQualityHeaderValue jsonHeader = new MediaTypeWithQualityHeaderValue("application/json");
         #endregion
+
+        #region constructor
 
         public ParisOpenData()
         {
             OpenDataBaseAdress = Business.Properties.Settings.Default.ParisOpenDataBaseAdresse;
             MaxRecordsByCall = Business.Properties.Settings.Default.MaxRecordsByCall;
         }
+        #endregion
 
         #region internal methods  
 
@@ -44,22 +46,21 @@ namespace MSLab.OpenData.Paris.Connexion
         }
 
         internal string getRecords(string datasetId, int datasetrows, int startingRecordNumber)
-        {            
-            if (datasetrows> MaxRecordsByCall)
+        {
+            if (datasetrows > MaxRecordsByCall)
             {
-                if (datasetrows>startingRecordNumber )
+                if (datasetrows > startingRecordNumber)
                     datasetrows = MaxRecordsByCall;
                 else
-                    datasetrows = datasetrows-startingRecordNumber;
+                    datasetrows = datasetrows - startingRecordNumber;
             }
-
 
             using (var client = new HttpClient() { BaseAddress = new Uri(OpenDataBaseAdress) })
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(jsonHeader);
 
-                Task<HttpResponseMessage> apiResponse = client.GetAsync(string.Format("records/1.0/search/?dataset={0}&rows={1}&start={2}", datasetId, datasetrows.ToString(),startingRecordNumber));
+                Task<HttpResponseMessage> apiResponse = client.GetAsync(string.Format("records/1.0/search/?dataset={0}&rows={1}&start={2}", datasetId, datasetrows.ToString(), startingRecordNumber));
 
                 if (apiResponse.Result.IsSuccessStatusCode)
                 {
