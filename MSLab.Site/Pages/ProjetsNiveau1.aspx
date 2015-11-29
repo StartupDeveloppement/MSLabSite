@@ -20,36 +20,38 @@
             </tr>
         </table>
         <div class="LabSiteZoneTexteClient">
+            <asp:Label runat="server" Text="Le client souhaiterais ajouter des fonctions à sa calculatrice:"></asp:Label>
             <table>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="Le client souhaiterais ajouter des fonctions à sa calculatrice:"></asp:Label>
+                        <asp:Label runat="server" Text="Partie fonctionnelle"></asp:Label>
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <asp:Label runat="server" Text="- Pouvoir utiliser des chiffres à virgule"></asp:Label>
-
+                        <asp:Label runat="server" Text="Partie technique"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="- Faire différents types d'opérations"></asp:Label>
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <asp:Label runat="server" Text="- Changer la couleur du texte selon le type de message"></asp:Label>
+                        <asp:Label runat="server" Text="- Pouvoir utiliser des chiffres à virgule"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="- Gérer les exceptions"></asp:Label>
                     </td>
+                    <td>
+                        <asp:Label runat="server" Text="- Changer la couleur du texte selon le type de message"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="- Avoir un client graphiquement avancé"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label runat="server" Text=""></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -72,13 +74,20 @@
             </tr>
         </table>
         <div class="LabSiteZoneTexteClient">
+            <asp:Label runat="server" Text="Le client souhaiterais ajouter des fonctions à son logiciel:"></asp:Label>
             <table>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="Le client souhaiterais ajouter des fonctions à son logiciel:"></asp:Label>
+                        <asp:Label runat="server" Text="Partie fonctionnelle"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label runat="server" Text="Partie technique"></asp:Label>
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        <asp:Label runat="server" Text="- Faire différents types d'opérations, gérer l'affichage correspondant (exemple : edf, gaz, mobile, salaire ...)"></asp:Label>
+                    </td>
                     <td>
                         <asp:Label runat="server" Text="- Pouvoir utiliser des chiffres à virgule"></asp:Label>
 
@@ -86,22 +95,18 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="- Faire différents types d'opérations, gérer l'affichage correspondant (exemple : edf, gaz, mobile, salaire ...)"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <asp:Label runat="server" Text="- Ajouter de la sécurité à l'application avec un identifiant/mot de passe"></asp:Label>
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <asp:Label runat="server" Text="- Séparer la notion d'opération et de compte en banque avec un MoneyManager, le fichier Program.cs est l'intermédiaire entre ces deux parties"></asp:Label>
+                        <asp:Label runat="server" Text="- Séparer la notion d'opération et de compte en banque avec un MoneyManager"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="- Avoir un client graphiquement avancé"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label runat="server" Text=""></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -124,10 +129,14 @@
             </tr>
         </table>
         <div class="LabSiteZoneTexteClient">
+            <asp:Label runat="server" Text="Le client souhaiterais ajouter des fonctions à son repertoire:"></asp:Label>
             <table>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="Le client souhaiterais ajouter des fonctions à son repertoire:"></asp:Label>
+                        <asp:Label runat="server" Text="Partie fonctionnelle"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label runat="server" Text="Partie technique"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -135,10 +144,14 @@
                         <asp:Label runat="server" Text="- Ajouter le numero de téléphone"></asp:Label>
 
                     </td>
+                    <td>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="- Ajouter l'adresse"></asp:Label>
+                    </td>
+                    <td>
                     </td>
                 </tr>
                 <tr>
