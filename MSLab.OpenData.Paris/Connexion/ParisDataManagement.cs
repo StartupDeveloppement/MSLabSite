@@ -13,6 +13,7 @@ namespace MSLab.OpenData.Paris.Business.Connexion
         /// <returns></returns>
         public void LesPrenomLesPlusDonnes(int nombrePrenomParAnnee)
         {
+
             using (var bdd = new ParisOpenDataContext())
             {
                 //Groupement par année

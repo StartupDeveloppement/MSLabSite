@@ -32,24 +32,34 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="- Faire différents types d'opérations"></asp:Label>
+                        <asp:Label runat="server" Text="Pouvoir utiliser des chiffres à virgule"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label runat="server" Text="- Pouvoir utiliser des chiffres à virgule"></asp:Label>
+                        <asp:Label runat="server" Text="Utiliser le type double"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="- Gérer les exceptions"></asp:Label>
+                        <asp:Label runat="server" Text="Faire différents types d'opérations"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label runat="server" Text="- Changer la couleur du texte selon le type de message"></asp:Label>
+                        <asp:Label runat="server" Text="Ajouter des méthodes à une classe"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="- Avoir un client graphiquement avancé"></asp:Label>
+                        <asp:Label runat="server" Text="Gérer les cas particuliers"></asp:Label>
                     </td>
+                    <td>
+                        <asp:Label runat="server" Text="Utiliser tryParse sur un type"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Changer la couleur du texte selon le type de message"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
                     <td>
                         <asp:Label runat="server" Text=""></asp:Label>
                     </td>
@@ -57,7 +67,7 @@
             </table>
         </div>
     </div>
-    
+
     <div class="LabSiteZoneProjet">
         <table>
             <tr>
@@ -106,7 +116,7 @@
                         <asp:Label runat="server" Text="- Avoir un client graphiquement avancé"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label runat="server" Text=""></asp:Label>
+                        <asp:Label runat="server" Text="Utiliser string.Format()"></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -142,31 +152,31 @@
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="- Ajouter le numero de téléphone"></asp:Label>
-
                     </td>
                     <td>
+                        <asp:Label runat="server" Text="Ajout de balises en Xaml"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="- Ajouter l'adresse"></asp:Label>
                     </td>
-                    <td>
-                    </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="- Supprimer un élément donné"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label runat="server" Text="Coder dans le code behind"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label runat="server" Text="- Ouvrir et enregistrer un fichier"></asp:Label>
                     </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label runat="server" Text="- Catégorie pro/perso"></asp:Label>
+                                        <td>
+                        <asp:Label runat="server" Text="Serialisation des données"></asp:Label>
                     </td>
                 </tr>
             </table>

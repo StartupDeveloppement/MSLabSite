@@ -10,22 +10,26 @@ namespace MSLab.OpenData.Paris.Connexion
 {
     internal class ParisOpenData
     {
-        #region private properties
+
+        #region Fields
+
         private string OpenDataBaseAdress;
         private int MaxRecordsByCall;
         private MediaTypeWithQualityHeaderValue jsonHeader = new MediaTypeWithQualityHeaderValue("application/json");
+
         #endregion
 
-        #region constructor
+        #region Constructor
 
         public ParisOpenData()
         {
             OpenDataBaseAdress = Business.Properties.Settings.Default.ParisOpenDataBaseAdresse;
             MaxRecordsByCall = Business.Properties.Settings.Default.MaxRecordsByCall;
         }
+
         #endregion
 
-        #region internal methods  
+        #region Methods  
 
         internal List<Dataset> GetDatasets()
         {
