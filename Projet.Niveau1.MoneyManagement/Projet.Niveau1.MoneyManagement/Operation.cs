@@ -1,50 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projet.Niveau1.MoneyManagement
 {
-    class Operation
+#pragma warning disable CS0659 // Type overrides Object.Equals(object o) but does not override Object.GetHashCode()
+    public class Operation
+#pragma warning restore CS0659 // Type overrides Object.Equals(object o) but does not override Object.GetHashCode()
     {
-        private DateTime dateOperation;
-        private int montant;
-        private bool reguliere;
+        internal DateTime DateOperation;
+        internal double Montant;
+        internal bool Regulier;
+        private string _reguliere;
 
-        public Operation(DateTime date, int montant, bool reguliere)
+        public Operation(DateTime date, double montant, bool regulier)
         {
-            dateOperation = date;
-            this.montant = montant;
-            this.reguliere = reguliere;
+            DateOperation = date;
+            Montant = montant;
+            Regulier = regulier;
         }
 
         public override string ToString()
         {
-            return dateOperation + "-" + montant;
+            var dateFormat = DateOperation.ToString("d");
+            if (Regulier)
+            {
+                _reguliere = "operation reguliere";
+            }
+            if(Montant.Equals(1.0))
+            {
+                return dateFormat + " d'un montant de: " + Montant + " euro " + _reguliere;
+            }
+            return dateFormat + " d'un montant de: " + Montant + " euros " + _reguliere;
         }
 
         public override bool Equals(object obj)
         {
-            Operation demo = obj as Operation;
-            return demo != null && (demo.montant == this.montant && demo.dateOperation == this.dateOperation &&
-                                    demo.reguliere == this.reguliere);
-        }
-
-        public void GetMontant()
-        {
-            Affichage.Afficher("2. Quel est le montant de la transaction ? (-1 pour ne sais plus)");
-            montant = 1;
-        }
-
-        public void GetDate()
-        {
-            Affichage.Afficher("2. Quel est la date de la transaction ? (-1 pour ne sais plus)");
-        }
-
-        public void GetRegularite()
-        {
-            Affichage.Afficher("1. Est-ce une opération régulière ? (0 pour oui, 1 pour non, 2 pour ne sais plus");
+            var demo = obj as Operation;
+            return demo != null && (demo.Montant.Equals(Montant) && demo.DateOperation == DateOperation &&
+                                    demo.Regulier == Regulier);
         }
     }
 }
