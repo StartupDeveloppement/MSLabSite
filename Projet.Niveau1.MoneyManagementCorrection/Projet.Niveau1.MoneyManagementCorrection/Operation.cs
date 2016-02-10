@@ -9,7 +9,6 @@ namespace Projet.Niveau1.MoneyManagementCorrection
         internal DateTime DateOperation;
         internal double Montant;
         internal bool Regulier;
-        private string _reguliere;
 
         public Operation(DateTime date, double montant, bool regulier)
         {
@@ -21,15 +20,12 @@ namespace Projet.Niveau1.MoneyManagementCorrection
         public override string ToString()
         {
             var dateFormat = DateOperation.ToString("d");
-            if (Regulier)
-            {
-                _reguliere = "operation reguliere";
-            }
+            
             if(Montant.Equals(1.0))
             {
-                return dateFormat + " d'un montant de: " + Montant + " euro " + _reguliere;
+                return dateFormat + " d'un montant de: " + Montant + " euro " + (_reguliere = Regulier ? "operation reguliere" : "non regulier");
             }
-            return dateFormat + " d'un montant de: " + Montant + " euros " + _reguliere;
+            return dateFormat + " d'un montant de: " + Montant + " euros " + (_reguliere = Regulier ? "operation reguliere" : "non regulier");
         }
 
         public override bool Equals(object obj)

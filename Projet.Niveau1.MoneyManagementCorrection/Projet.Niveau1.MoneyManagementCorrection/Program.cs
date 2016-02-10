@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Projet.Niveau1.MoneyManagementCorrection.Affichage;
 using Projet.Niveau1.MoneyManagementCorrection.Validation;
-
 // ReSharper disable UnusedParameter.Local
 
 namespace Projet.Niveau1.MoneyManagementCorrection

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Projet.Niveau1.MoneyManagementCorrection.Affichage;
 using Projet.Niveau1.MoneyManagementCorrection.Validation;
 
@@ -47,7 +48,7 @@ namespace Projet.Niveau1.MoneyManagementCorrection
             try
             {
                 int choix = Convert.ToInt16(Console.ReadLine());
-                return choix == 1;
+                return parametres.Values.Contains(choix);
             }
             catch (Exception)
             {
@@ -59,7 +60,15 @@ namespace Projet.Niveau1.MoneyManagementCorrection
         {
             var parametres = ParametersDescription.Get(condition);
             Afficher(TextesDescription.Get(texte) + parametres.Texte);
-            return 1.0;
+            try
+            {
+                int choix = Convert.ToInt16(Console.ReadLine());
+                return choix;
+            }
+            catch (Exception)
+            {
+                return 1.0;
+            }
         }
 
         public static DateTime GetDate(Textes texte, ValuesCondition condition)
@@ -73,7 +82,15 @@ namespace Projet.Niveau1.MoneyManagementCorrection
         {
             var parametres = ParametersDescription.Get(condition);
             Afficher(TextesDescription.Get(texte) + parametres.Texte);
-            return false;
+            try
+            {
+                int choix = Convert.ToInt16(Console.ReadLine());
+                return parametres.Values.Contains(choix);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

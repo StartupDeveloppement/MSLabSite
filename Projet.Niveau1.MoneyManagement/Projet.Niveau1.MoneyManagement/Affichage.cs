@@ -1,5 +1,4 @@
-﻿
-using static System.Console;
+﻿using static System.Console;
 
 namespace Projet.Niveau1.MoneyManagement
 {
