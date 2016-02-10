@@ -1,29 +1,27 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
-using Projet.Niveau1.MoneyManagement.Affichage;
-using Projet.Niveau1.MoneyManagement.Validation;
-// ReSharper disable UnusedParameter.Local
 
 namespace Projet.Niveau1.MoneyManagement
 {
-    internal static class Program
+    class Program
     {
-        private static bool _exitRequested;
+        internal static bool ExitRequested;
         private static List<Operation> _compteEnBanque;
 
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-            DisplayCenter.Afficher(Textes.Welcome);
-            _exitRequested = false;
+            Affichage.Afficher("Bonjour !");
+            ExitRequested = false;
             _compteEnBanque = new List<Operation>();
             BeginMoneyManagement();
         }
 
         private static void BeginMoneyManagement()
         {
-            while (_exitRequested == false)
+            while(ExitRequested == false)
             {
-                DisplayCenter.DisplayMenu();
+                Affichage.DisplayMenu();
                 int choix = Convert.ToInt16(Console.ReadLine());
                 if (choix != 6)
                 {
@@ -61,38 +59,39 @@ namespace Projet.Niveau1.MoneyManagement
         private static void ViderLeCompte()
         {
             _compteEnBanque = null;
-            DisplayCenter.Afficher(Textes.AccountIsEmpty);
+            Affichage.Afficher("Le compte est vide, merci de passer à la banque");
         }
 
         private static void SupprimerUneOperation()
         {
-            DisplayCenter.Afficher(Textes.AskForAllDetails);
+            Affichage.Afficher("Merci de donner des détails afin de trouver la bonne opération : ");
 
-            var dummy = new Operation(new DateTime(), 0, false)
-            {
-                DateOperation = DisplayCenter.GetDate(Textes.FindDate, ValuesCondition.LessThanOne),
-                Montant = DisplayCenter.GetMontant(Textes.FindMontant, ValuesCondition.LessThanOne),
-                Regulier = DisplayCenter.GetRegularite(Textes.FindRegularite, ValuesCondition.AbcOneTwoThree)
-            };
+            Operation dummy = new Operation(new DateTime(), 0,false);
+            dummy.GetDate();
+            dummy.GetMontant();
+            dummy.GetRegularite();
 
-            var existe = EstCeQueOperationExiste(dummy);
-            if (existe)
+            bool existe = EstCeQueOperationExiste(dummy);
+            if(existe)
             {
-                _compteEnBanque.Remove(dummy);
-                if (DisplayCenter.DemanderSiAutreOperation(Textes.AskForAnotherToDelete, ValuesCondition.OneForYesZeroForNo))
+                if (Affichage.DemanderSiAutreOperation())
                 {
-                    SupprimerUneOperation();
+                    _compteEnBanque.Remove(dummy);
+                }
+                else
+                {
+                    Affichage.Afficher("Cette opération ne va pas être supprimée");
                 }
             }
             else
             {
-                DisplayCenter.Afficher(Textes.FindNotFound);
+                Affichage.Afficher("Cette opération n'existe pas, merci de recommencer");
             }
         }
 
         private static bool EstCeQueOperationExiste(Operation dummy)
         {
-            var result = false;
+            bool result = false;
             foreach (var operation in _compteEnBanque)
             {
                 if (operation.Equals(dummy))
@@ -103,56 +102,48 @@ namespace Projet.Niveau1.MoneyManagement
 
         private static void AjouterDesOperations()
         {
-            var finAjout = true;
+            bool finAjout = true;
             int nombre = 1;
-            DisplayCenter.Afficher(Textes.AddsPart);
+            Affichage.Afficher("Début des ajouts");
             while (finAjout)
             {
-                DisplayCenter.Afficher("Opération " + nombre + " :");
+                Affichage.Afficher("Opération " + nombre + " :");
                 AjouterUneOperation();
-                finAjout = DisplayCenter.DemanderSiAutreOperation(Textes.AddAnother, ValuesCondition.OneForYesZeroForNo);
-                nombre++;
+                finAjout = Affichage.DemanderSiAutreOperation();
             }
         }
 
         private static void AjouterUneOperation()
         {
-            DisplayCenter.Afficher(Textes.AddPart);
-            DisplayCenter.Afficher(Textes.AddAskForDate);
-            var date = Convert.ToString(Console.ReadLine());
-            var dt2 = DateTime.Parse(date);
-            DisplayCenter.Afficher(Textes.AddAskForMontant);
-            var value = Console.ReadLine();
-            if (value != null)
-            {
-                var newValue = value.Replace(".", ",");
-                var montant = Convert.ToDouble(newValue);
-                var regulier = DisplayCenter.GetRegularite(Textes.AddAskForRegularite, ValuesCondition.OneForYesZeroForNo);
-                var operationEnCours = new Operation(dt2, montant, regulier);
-                _compteEnBanque.Add(operationEnCours);
-            }
-            else
-            {
-                DisplayCenter.Afficher(Textes.AddImpossible);
-            }
+            //TODO
+            //Prendre en compte les choix de l'utilisateur, vérifier les saisies
+            Affichage.Afficher("----- Ajout d'une opération -----");
+            Affichage.Afficher("Date de l'opération : ");
+            DateTime saisie = new DateTime();
+            Affichage.Afficher("Montant de l'opération : ");
+            int montant = 100;
+            Affichage.Afficher("Opération régulière (0 pour non, 1 pour oui)");
+            bool regulier = true;
+            Operation operationEnCours = new Operation(saisie, montant, regulier);
+            _compteEnBanque.Add(operationEnCours);
         }
 
         private static void ListerLesOperations()
         {
-            if (_compteEnBanque.Count == 0)
+            if(_compteEnBanque.Count == 0)
             {
-                DisplayCenter.Afficher(Textes.ListPartImpossible);
+                Affichage.Afficher("Aucune opération disponible, merci de créditer votre compte");
             }
             else
             {
-                DisplayCenter.Afficher(Textes.ListPart);
+                Affichage.Afficher("----- Liste des opérations -----");
                 foreach (var operation in _compteEnBanque)
                 {
-                    var operationAvecFormat = operation.ToString();
-                    DisplayCenter.Afficher(operationAvecFormat);
+                    string operationAvecFormat = operation.ToString();
+                    Affichage.Afficher(operationAvecFormat);
                 }
             }
-            DisplayCenter.Afficher("");
+            Affichage.Afficher("");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Projet.Niveau1.MoneyManagement.Validation
+﻿namespace Projet.Niveau1.MoneyManagementCorrection.Validation
 {
     public enum ValuesCondition
     {

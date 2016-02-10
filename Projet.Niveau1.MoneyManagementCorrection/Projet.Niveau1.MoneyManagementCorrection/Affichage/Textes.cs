@@ -1,4 +1,4 @@
-﻿namespace Projet.Niveau1.MoneyManagement.Affichage
+﻿namespace Projet.Niveau1.MoneyManagementCorrection.Affichage
 {
     public enum Textes
     {

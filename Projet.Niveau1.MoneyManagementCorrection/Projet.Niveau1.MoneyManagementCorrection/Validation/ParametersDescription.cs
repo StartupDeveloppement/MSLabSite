@@ -1,24 +1,28 @@
 ﻿using System;
 
-namespace Projet.Niveau1.MoneyManagement.Affichage
+namespace Projet.Niveau1.MoneyManagementCorrection.Validation
 {
     [AttributeUsage(AttributeTargets.Field)]
-    public class TextesDescription : Attribute
+    public class ParametersDescription : Attribute
     {
-        private readonly string _settings;
+        private readonly Parameters _settings;
 
-        public TextesDescription(string texte)
+        public ParametersDescription(int[] values, string texte)
         {
-            _settings = texte;
+            _settings = new Parameters
+            {
+                Values = values,
+                Texte = texte
+            };
         }
 
-        public static string Get(Type tp, string name)
+        public static Parameters Get(Type tp, string name)
         {
             var mi = tp.GetMember(name);
             if (mi != null && mi.Length > 0)
             {
                 var attr = GetCustomAttribute(mi[0],
-                    typeof(TextesDescription)) as TextesDescription;
+                    typeof(ParametersDescription)) as ParametersDescription;
                 if (attr != null)
                 {
                     return attr._settings;
@@ -27,13 +31,13 @@ namespace Projet.Niveau1.MoneyManagement.Affichage
             return null;
         }
 
-        public static string Get(object enm)
+        public static Parameters Get(object enm)
         {
             var mi = enm?.GetType().GetMember(enm.ToString());
             if (mi != null && mi.Length > 0)
             {
                 var attr = GetCustomAttribute(mi[0],
-                    typeof(TextesDescription)) as TextesDescription;
+                    typeof(ParametersDescription)) as ParametersDescription;
                 if (attr != null)
                 {
                     return attr._settings;

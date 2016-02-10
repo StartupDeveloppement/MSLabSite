@@ -1,26 +1,25 @@
 ﻿using System;
-using Projet.Niveau1.MoneyManagement.Affichage;
-using Projet.Niveau1.MoneyManagement.Validation;
-using static System.Console;
+using Projet.Niveau1.MoneyManagementCorrection.Affichage;
+using Projet.Niveau1.MoneyManagementCorrection.Validation;
 
-namespace Projet.Niveau1.MoneyManagement
+namespace Projet.Niveau1.MoneyManagementCorrection
 {
     static class DisplayCenter
     {
         #region Affichage Console
         public static void Afficher(string texte)
         {
-            WriteLine(texte);
+            Console.WriteLine(texte);
         }
 
         public static void Afficher(Textes texte)
         {
-            WriteLine(TextesDescription.Get(texte));
+            Console.WriteLine(TextesDescription.Get(texte));
         }
 
         private static void AffichageCouleur(Textes texte, ConsoleColor couleur)
         {
-            ForegroundColor = couleur;
+            Console.ForegroundColor = couleur;
             Afficher(texte);
         }
         #endregion
@@ -47,7 +46,7 @@ namespace Projet.Niveau1.MoneyManagement
             Afficher(TextesDescription.Get(texte) + parametres.Texte);
             try
             {
-                int choix = Convert.ToInt16(ReadLine());
+                int choix = Convert.ToInt16(Console.ReadLine());
                 return choix == 1;
             }
             catch (Exception)
